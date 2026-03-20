@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registruotis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark">
+  <main class="center-wrap">
+    <div class="card register-card" id="register-card">
+      <h1>Registruotis</h1>
+
+      <label class="field">
+        <span>Vartotojo vardas</span>
+        <input id="reg-username" type="text" autocomplete="username" />
+      </label>
+
+      <label class="field">
+        <span>El. paštas</span>
+        <input id="reg-email" type="email" autocomplete="email" />
+      </label>
+
+      <label class="field">
+        <span>Slaptažodis</span>
+        <input id="reg-password" type="password" autocomplete="new-password" />
+      </label>
+
+      <label class="field">
+        <span>Partnerio kodas (pasirinktinai)</span>
+        <input id="reg-partner" type="text" />
+      </label>
+
+      <label class="checkbox-inline">
+        <input id="reg-human" type="checkbox" />
+        <span>Aš esu žmogus</span>
+      </label>
+
+      <div class="hcaptcha-block">hCaptcha <span class="muted">Privatumas - Sąlygos</span></div>
+
+      <button id="btn-register" class="primary">Registruotis</button>
+
+      <p class="small-note">Jau turite paskyrą? <a id="back-to-login" href="index.html">Prisijunkite čia!</a></p>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
