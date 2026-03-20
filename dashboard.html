@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark">
+  <header class="topbar">
+    <div class="brand">Mano Žaidimai</div>
+    <div class="top-actions">
+      <span id="welcome-user"></span>
+      <button id="btn-logout" class="btn-ghost">Atsijungti</button>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <h2>Žaidimų tinklelis</h2>
+    <p class="muted">Spustelkite ✎, kad pakeistumėte pavadinimą arba įkeltumėte paveikslėlį.</p>
+
+    <div id="games-grid" class="games-grid"></div>
+
+    <div class="controls">
+      <button id="btn-add-game" class="primary small">Pridėti žaidimą</button>
+      <button id="btn-reset-games" class="btn-ghost small">Atkurti numatytus</button>
+    </div>
+  </main>
+
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Redaguoti žaidimą</h3>
+      <label class="field"><span>Pavadinimas</span><input id="edit-title" type="text" /></label>
+      <label class="field"><span>Įkelti paveikslėlį</span><input id="edit-image" type="file" accept="image/*" /></label>
+      <div class="modal-actions">
+        <button id="save-game" class="primary small">Išsaugoti</button>
+        <button id="cancel-edit" class="btn-ghost small">Atšaukti</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="script.js"></script>
+</body>
+</html>
